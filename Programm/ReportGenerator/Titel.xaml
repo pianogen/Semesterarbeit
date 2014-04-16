@@ -1,0 +1,41 @@
+﻿<Window x:Class="ReportGenerator.Titel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Title" Height="500" Width="350"  ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Title:" Grid.Column="0" Grid.Row="0"/>
+        <Label Content="Font:" Grid.Column="0" Grid.Row="1"/>
+        <Label Content="Size:" Grid.Column="0" Grid.Row="2"/>
+        <Label Grid.Column="0" Grid.Row="3" Width="65">
+            <TextBlock TextWrapping="WrapWithOverflow">Paragraph After:</TextBlock>
+        </Label>
+        <Label Content="Style:" Grid.Column="0" Grid.Row="4"/>
+        <Label Content="Color:" Grid.Column="0" Grid.Row="5"/>
+        <Label Content="New Page:" Grid.Column="0" Grid.Row="6" />
+        <TextBox Name="NameChooser" Style="{StaticResource normalTextBox}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <TextBox Name="SizeChooser" Style="{StaticResource normalTextBox}" Text="32" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" PreviewTextInput="int_PreviewTextInput" />
+        <TextBox Name="ParagraphAfter" Style="{StaticResource normalTextBox}" Text="20" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" PreviewTextInput="int_PreviewTextInput" />
+        <ComboBox Name="FontChooser" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
+        <ComboBox Name="FontStyleChooser" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" />
+        <ComboBox Name="FontColorChooser" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" />
+        <CheckBox Name="PageBreakSetter" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" />
+        <Button Content="OK" Style="{StaticResource actionButtons}" Grid.Column="1" Grid.Row="7" Click="Button_Click"/>
+        <Button Name="CancelButton" Style="{StaticResource actionButtons}" Content="Cancel" IsCancel="true" Grid.Column="2" Grid.Row="7" Click="Cancel_Click" />
+    </Grid>
+</Window>
+

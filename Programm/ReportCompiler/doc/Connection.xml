@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Connection</name>
+    </assembly>
+    <members>
+        <member name="T:ReportCompiler.Connection">
+            <summary>
+            Schreibt alle Werte aller Connection 
+            die sich in der XML Datei befinden,
+            in jeweils einem Connection Objekt.
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Id">
+            <summary>
+            Speichert Unterknoten id in die Id Property
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Type">
+            <summary>
+            Speichert den Verbindungstyp in die Type Property
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Server">
+            <summary>
+            Speichert die IP Adresse in die Server Property
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Database">
+            <summary>
+            Speichert den Datenbanknamen in die Database Property
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Username">
+            <summary>
+            Speichert den Benutzernamen in die User Property
+            </summary>
+        </member>
+        <member name="P:ReportCompiler.Connection.Password">
+            <summary>
+            Speichert das Passwort in die Password Property
+            </summary>
+        </member>
+    </members>
+</doc>

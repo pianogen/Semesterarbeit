@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReportCompilerTest</name>
+    </assembly>
+    <members>
+        <member name="T:ReportCompilerTest.ConnectionTest">
+             <summary>
+             Das ist die Testklasse der Klasse Connection im Projekt ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.DatabaseTest">
+             <summary>
+             Testet das Verhalten der Property Database
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.IdTest">
+             <summary>
+             Testet das Verhalten der Property Id
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.PasswordTest">
+             <summary>
+             Testet das Verhalten der Property Password
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.ServerTest">
+             <summary>
+            Testet das Verhalten der Property Server
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.TypeTest">
+             <summary>
+             Testet das Verhalten der Property Type
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ConnectionTest.UsernameTest">
+             <summary>
+             Testet das Verhalten der Property Username
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.Integrationstest">
+            <summary>
+            Diese Testklasse testet die Zusammenarbeit aller Komponenten des Projekts ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.InitializeXML">
+            <summary>
+            Initialisiert ein XML Objekt
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.AddElement">
+            <summary>
+            Fügt dem XML Objekt das Format Element hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Connection">
+            <summary>
+            Fügt dem XML Objekt ein Connection Element hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Variables">
+            <summary>
+            Fügt dem XML Objekt ein Variabel Element und die Format Parameter hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Mathe">
+            <summary>
+            Fügt dem XML Objekt ein Mathematic Element und die Format Parameter hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Format">
+            <summary>
+            Fügt dem XML Objekt die Format Paramter hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Text">
+            <summary>
+            Fügt dem XML Objekt ein Text Element und die Format Parameter hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.Tabelle">
+            <summary>
+            Fügt dem XML Objekt ein Tabellen Element und die Format Parameter hinzu
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.ConnectionsTest">
+            <summary>
+            Überprüft, ob die ID des aufgenommenen Connection Element sich in der Liste der Verbindungen befindet
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.VariablesTest">
+            <summary>
+            Überprüft, ob der Name des aufgenommenen Variabel Element sich in der Variablenliste befindet
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.MatheTest">
+            <summary>
+            Überprüft, ob der Name das erwartete Result des Mathe Elements sich in der Variablenliste befindet
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.FormatTest">
+            <summary>
+            Überprüft, ob ein Dokument erstellt wurde. Einstellungen müssen im Dokument selbst überprüft werden.
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.TextTest">
+            <summary>
+            Überprüft, ob ein Dokument erstellt wurde. Text muss im Dokument selbst überprüft werden.
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.TableTest">
+            <summary>
+            Überprüft, ob ein Dokument erstellt wurde. Tabelle muss im Dokument selbst überprüft werden.
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.Integrationstest.BigTest">
+            <summary>
+            Liest ein komplettes XML Dokument ein und überprüft ob Word Datei erstellt wurde. Inhalt muss selber überprüft werden.
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.MathematicsTest">
+             <summary>
+             Diese Testklasse teste die Klasse Mathematics aus dem Projekt ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MathematicsTest.FormulaTest">
+             <summary>
+             Testet das Verhalten der Property Formula
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MathematicsTest.NameTest">
+             <summary>
+             Testet das Verhalten der Property Name
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MathematicsTest.ResultTest">
+             <summary>
+             Teste das Verhalten der Property Result
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.MSConnectorTest">
+             <summary>
+             Diese Testklasse testet die Klasse MSConnector aus dem Projekt ReportComipler
+            </summary>
+        </member>
+        <member name="F:ReportCompilerTest.MSConnectorTest.connector">
+            <summary>
+            Speicher für MSConnector Field
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.InitalizeConnection">
+            <summary>
+            Setzen der Parameter für eine gültige Datenbankverbindung
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.InitializeFailedConnection">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannter Server)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.InitializeFailedDatabase">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannte Datenbank)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.InitializeFailedUserName">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannter Benutzername)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.ConnectionStringTest">
+            <summary>
+            Testet das Verhalten der Property ConnectionString
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.ResultTest">
+             <summary>
+             Fragt einen einzelnen Wert auf der Datenbank ab, und überprüft ob der Inhalt nicht leer ist
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.loadTableTest">
+             <summary>
+             Fragt einen Wertbereich auf der Datenbank ab und überprüft ob der Inhalt nicht leer ist
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.ConnectTest">
+            <summary>
+            Überprüft ob Datenbankverbindung erfolgreich war
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.FailedConnection">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.FailedDatabaseConnection">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.FailedUsernameorPW">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.FailedQueryResult">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MSConnectorTest.FailedQueryLoadTable">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.MyConnectorTest">
+             <summary>
+             Diese Testklasse testet die Klasse MSConnector aus dem Projekt ReportComipler
+            </summary>
+        </member>
+        <member name="F:ReportCompilerTest.MyConnectorTest.connector">
+            <summary>
+            Speicher für MSConnector Field
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.InitalizeConnection">
+            <summary>
+            Setzen der Parameter für eine gültige Datenbankverbindung
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.InitializeFailedConnection">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannter Server)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.InitializeFailedDatabase">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannte Datenbank)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.InitializeFailedUserName">
+            <summary>
+            Setzen der Parameter für eine ungültige Datenbankverbindung (unbekannter Benutzername)
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.ConnectionStringTest">
+            <summary>
+            Testet das Verhalten der Property ConnectionString
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.ResultTest">
+             <summary>
+             Fragt einen einzelnen Wert auf der Datenbank ab, und überprüft ob der Inhalt nicht leer ist
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.loadTableTest">
+             <summary>
+             Fragt einen Wertbereich auf der Datenbank ab und überprüft ob der Inhalt nicht leer ist
+            </summary>
+             <summary>
+            A test for loadTable
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.ConnectTest">
+            <summary>
+            Überprüft ob Datenbankverbindung erfolgreich war
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.FailedConnection">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.FailedDatabaseConnection">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.FailedUsernameorPW">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.FailedQueryResult">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.MyConnectorTest.FailedQueryLoadTable">
+            <summary>
+            Überprüft ob Datenbankverbindung fehlgeschlagen hat
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.PageSetupTest">
+             <summary>
+             Diese Testklasse testet die Klasse PageSetup des Projekts ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.PageSetupTest.SaveTest">
+             <summary>
+             Testet das Verhalten der Property Save
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.PageSetupTest.TemplateTest">
+             <summary>
+             Testet das Verhalten der Property Template
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.ProgramTest">
+             <summary>
+             Die Klasse ProgramTest testet die Klasse Program von dem Projekt ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ProgramTest.OpenXMLTest">
+             <summary>
+             Testet, ob die Datei gefunden wird
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ProgramTest.FileTypeTest">
+            <summary>
+            Überprüft, ob Typ einer XML Datei richtig erkannt wird.
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.ProgramTest.FileTypeTestFailed">
+            <summary>
+            Überprüft, ob Typ einer nicht - XML Datei erkannt wird
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.TabelleTest">
+             <summary>
+             Die Testklasse TabelleTest testet die Klasse Tabelle aus dem Projekt ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.#ctor">
+            <summary>
+            Initialisiert die Datenbankverbindung
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.InitializeDBConnection">
+            <summary>
+            Setzt Werte für die Datenbankverbindung ein
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.InitializeSql">
+            <summary>
+            Definiert eine korrekte SQL Abfrage
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.InitializeFailSql">
+            <summary>
+            Definiert eine falsche SQL Abfrage
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.InitializeFailDBConnection">
+            <summary>
+            Definiert einen falsche DB Server
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.getContentTest">
+             <summary>
+             Testet, ob eine Abfrage klappt, und ob der Inhalt der Tabelle nich leer ist
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.getFailDBContentTest">
+            <summary>
+            Testet, ob eine falscher eine Exception wirft
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.getFailContentTest">
+            <summary>
+            Testet, ob eine falsche Abfrage eine Exception wirft
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.BgColorTest">
+             <summary>
+             Testet Verhalten von Property BgColorTest
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.SizeTest">
+             <summary>
+             Testet Verhalten von Property Size
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.ParagraphTest">
+             <summary>
+             Testet Verhalten von Property Paragraph
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.FontTest">
+             <summary>
+             Testet Verhalten von Property Font
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.BoldTest">
+             <summary>
+             Testet Verhalten von Property Bold
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.BorderTest">
+             <summary>
+             Testet Verhalten von Property Border
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.ContentTest">
+             <summary>
+             Testet Verhalten von Property Content
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.IdTest">
+             <summary>
+             Testet Verhalten von Property ID
+            </summary>>
+        </member>
+        <member name="M:ReportCompilerTest.TabelleTest.TextTest">
+             <summary>
+             Testet Verhalten von Property Text
+            </summary>
+        </member>
+        <member name="T:ReportCompilerTest.VariabelTest">
+             <summary>
+             Diese Testklasse testet die Klasse Variabel aus dem Projekt ReportCompiler
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.#ctor">
+            <summary>
+            Initialisert DB Verbindung
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.InitializeDBConnection">
+            <summary>
+            Setzt richtige Werte für DB Verbindung
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.InitializeSqlStringVariable">
+            <summary>
+            Setzt richtige SQL Abfrage ein
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.InitializeSqlIntVariable">
+            <summary>
+            Initialisert Int Variable
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.InitializeFailSqlVariable">
+            <summary>
+            Initialisiert fehlerhaft SQL Abfrage
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.ResultToDecTest">
+             <summary>
+            ¨Überprüft, ob das Casten der Werte funktioniert
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.ResultToDecFailTest">
+            <summary>
+            Überprüft, ob bei fehlerhaftem Casten eine Exception geworfen wird
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.getContentLocalTest">
+             <summary>
+             Überprüft ob lokale String Variablen funktionieren
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.getSqlContentTest">
+             <summary>
+             Überprüft ob SQL String Variablen funktionieren
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.getSqlNumberTest">
+             <summary>
+             Überprüft ob SQL int Variablen funktionieren
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.FalseSQLSyntax">
+            <summary>
+            Testet, ob bei fehlerhaften SQL Abfrage exception geworfen wird
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.getLocalContentIntTest">
+             <summary>
+             Überprüft ob lokale int Variablen funktionieren
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.ContentTest">
+             <summary>
+            A test for Content
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.IdTest">
+             <summary>
+            A test for Id
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.NameTest">
+             <summary>
+            A test for Name
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.NumberTest">
+             <summary>
+            A test for Number
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.SourceTest">
+             <summary>
+            A test for Source
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.TextTest">
+             <summary>
+            A test for Text
+            </summary>
+        </member>
+        <member name="M:ReportCompilerTest.VariabelTest.TypeTest">
+             <summary>
+            A test for Type
+            </summary>
+        </member>
+    </members>
+</doc>

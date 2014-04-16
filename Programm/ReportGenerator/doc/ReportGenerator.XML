@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReportGenerator</name>
+    </assembly>
+    <members>
+        <member name="T:ReportGenerator.Connection">
+            <summary>
+            Interaction logic for Connection.xaml
+            </summary>
+            <summary>
+            Connection
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Connection.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initialisiert die Komponenten der Verbindung und speichert alle bereits gesetzten Verbindungen in einer Variable ab.
+            </summary>
+            <param name="id">Liste aller bereits gesetzten Verbindungen</param>
+        </member>
+        <member name="M:ReportGenerator.Connection.Send_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler um die Eingabe zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Connection.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler um die Eingabe zurück zusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Connection.EmptyTextBox">
+            <summary>
+            Überprüft, ob alle Felder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Connection.ConnectionAlreadyExists">
+            <summary>
+            Überprüft, ob die eingegebene ID schon vorhanden ist
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Connection.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.Id">
+            <summary>
+            Property für die Verbindungs-Id
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.Type">
+            <summary>
+            Property für den Verbindugstyp, falls Microsoft SQL ausgewählt wurde wird MSSQL zurückgegeben
+            Falls MySQL ausgewählt wurde, wird MySQL zurückgegeben
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.ConnectionString">
+            <summary>
+            Property die IP Adresse des Servers
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.Database">
+            <summary>
+            Property für den Datenbanknamen
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.User">
+            <summary>
+            Property für den Datenbankbenutzernamen
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Connection.Password">
+            <summary>
+            Property für das Passwort des Datenbankbenutzers
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.EmptyTextBoxException">
+            <summary>
+            Eigene Exception. Wird geworfen, falls beim definieren eines Word Objekt ein Textfeld leer ist.
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.FileAccessor">
+            <summary>
+            Diese Klasse handelt den gesamten Dateizugriff der XML Datei
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.FileAccessor.Save(System.String@,ReportGenerator.WriteXml)">
+            <summary>
+            Statische Methode
+            Speichert den gesamten Xml Quellcode in eine *.xml Datei 
+            Falls die Datei bereits geladen wurde, wird sie gelöscht und neu erstellt
+            Falls die Datei neu ist wird ein Fenster geöffnet, um den Speicherort zu bestimmen.
+            Bei einem IO Fehler wird eine Exception geworfen.
+            </summary>
+            <param name="fileName">Dieser Paramater ist von dem Typ string und beihnaltet den Pfad der XML Datei</param>
+            <param name="xml">Dieser Parameter ist vom Typ WriteXml und beinhaltet den gesamten Xml Quellcode</param>
+        </member>
+        <member name="M:ReportGenerator.FileAccessor.Open">
+            <summary>
+            Statische Methode
+            Öffnet ein Fenster, um die Datei auszuwählen, welche eingelesen werden muss
+            Es wird ein Xml Filter gesetzt, somit werden nur Xml Dateien angezeigt.
+            </summary>
+            <returns>Gibt den Pfad der Xml Datei zurück</returns>
+        </member>
+        <member name="T:ReportGenerator.Mathematic">
+            <summary>
+            Interaction logic for Mathematic.xaml
+            </summary>
+            <summary>
+            Mathematic
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Mathematic.#ctor(System.Collections.Generic.SortedList{System.String,System.String})">
+            <summary>
+            Initialiserung der WPF Komponenten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Mathematic.SendenButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler um die Eingabe zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Mathematic.CancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler um die Eingabe zurück zusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Mathematic.EmptyTextBox">
+            <summary>
+            Überprüft, ob alle Felder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Mathematic.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Mathematic.Identificator">
+            <summary>
+            Property für den Namen der algebraischer Formel
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Mathematic.Formula">
+            <summary>
+            Property für die algebraische Formel
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.PageSetup">
+            <summary>
+            Interaction logic for PageSetup.xaml
+            </summary>
+            <summary>
+            PageSetup
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.#ctor">
+            <summary>
+            Initialiserung der WPF Komponenten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.Browse_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler, um den Pfad des Word Dokuments anzugeben
+            Windows Explorer Fenster öffnet sich
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.BrowseTemplate_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button_Handler, um den Pfad der Word Vorlage anzugeben
+            Windows Explorer öffnet sich
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zurück zu setzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.SendButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler, um die Eingaben zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.Save_Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler, um die Prozedur 'Word DOkument Speicherort' abzubrechen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.Template_Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler, um die Prozedur 'Word Vorlage Speicherort' abzubrechen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.EmptyTextBox">
+            <summary>
+            Überprüft, ob alle Felder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.PageSetup.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.PageSetup.Save">
+            <summary>
+            Property für den Speicherort und Namen des Word Dokuments
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.PageSetup.TemplatePath">
+            <summary>
+            Property für den Speicherort der Vorlage
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.Tabelle">
+            <summary>
+            Interaction logic for Table.xaml
+            </summary>
+            <summary>
+            Tabelle
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initialisert die WPF Komponente
+            Ruft die Methoden FillComboBox und ChooseColor auf
+            </summary>
+            <param name="list">Als Paramter wird die Liste der Connections Id mitgegegben</param>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.FillComboBox(System.Collections.Generic.List{System.String})">
+            <summary>
+            Setzt alle gestetzten Connections Id in eine ComboBox
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.ChooseFont">
+            <summary>
+            Ruft alle möglichen Schriftarten von Windows auf und speichert si in eine ComboBox
+            Standardwert ist Arial
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.ChooseColor">
+            <summary>
+            Generiert eine List mit allen möglichen Windows Farben und füllt eine ComboBox damit
+            Als Standardwert wird weiss gesetzt
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.Send_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zurückzusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.EmptyCheck">
+            <summary>
+            Überprüft, ob alle Textfelder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.int_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Lässt bei den Textfelder 'Size' und 'Paragraph' nur numerische Werte zu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Tabelle.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Id">
+            <summary>
+            Property für die Verbindungs ID
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Bold">
+            <summary>
+            Property für den Stilzustand des Tabellenkopfes
+            </summary>d
+        </member>
+        <member name="P:ReportGenerator.Tabelle.BgColor">
+            <summary>
+            Property für die Hintergrundfarbe des Tabellenkopfes
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Border">
+            <summary>
+            Property für die Randeigenschaft der Tabelle
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Sql">
+            <summary>
+            Property für die SQL Abfrage
+            Die Eingabe wird maskiert, um die Xml Syntax nicht zu verletzen
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Font">
+            <summary>
+            Property für den Schriftart des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Size">
+            <summary>
+            Property für die Textgrösse
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Tabelle.Paragraph">
+            <summary>
+            Property für den Absatz nach dem Text
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.Text">
+            <summary>
+            Interaction logic for Text.xaml
+            </summary>
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.#ctor">
+            <summary>
+            Initalisiert die WPF Komponente
+            Ruft folgende Methoden auf
+            ChooseFont()
+            ChooseFontStyle()
+            ChooseColor()
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.ConverterStyleToInt(System.String)">
+            <summary>
+            Wandelt für den späteren Gebrauch die Auswahl des Schriftstil, welches als Text weitergegeben wird, in Zahlen um
+            0 Steht für normal
+            1 Steht für dick
+            2 Steht für kursiv
+            3 Steht für unterstrichen
+            </summary>
+            <param name="value">Als Parameter wird der ausgewählte Schriftstil mitgegeben</param>
+            <returns>Gibt die konvertierte Zahl zurück</returns>
+        </member>
+        <member name="M:ReportGenerator.Text.ChooseFont">
+            <summary>
+            Ruft alle möglichen Schriftarten von Windows auf und speichert si in eine ComboBox
+            Standardwert ist Arial
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.ChooseFontStyle">
+            <summary>
+            Generiert eine Liste mit den vier möglichen Schriftstils
+            Standardwert ist Normal
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.ChooseColor">
+            <summary>
+            Ruft alle möglichen Farben in Windows auf und speichert sie in eine Liste
+            Standardwert ist schwarz
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.Send_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Text.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingabe zurückzusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Text.EmptyTextBox">
+            <summary>
+            Überprüft, ob alle Textfelder etwas beinhalten.
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Text.int_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Lässt bei den Textfelder 'Size' und 'Paragraph' nur numerische Werte zu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Text.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.ClearType">
+            <summary>
+            Property für die Texteingabe,
+            Die Eingabe wird maskiert um die Xml Syntax nicht zu verletzen
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.Font">
+            <summary>
+            Property für den Schriftart des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.Size">
+            <summary>
+            Property für die Textgrösse
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.StyleConverter">
+            <summary>
+            Property für den Schriftstil des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.Color">
+            <summary>
+            Property für die Schriftfarbe des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Text.Paragraph">
+            <summary>
+            Property für den Absatz nach dem Text
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.Titel">
+            <summary>
+            Interaction logic for Titel.xaml
+            </summary>
+            <summary>
+            Titel
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.#ctor">
+            <summary>
+            /// Initalisiert die WPF Komponente
+            Ruft folgende Methoden auf
+            ChooseFont()
+            ChooseFontStyle()
+            ChooseColor()
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.ConverterStyleToInt(System.String)">
+            <summary>
+            Wandelt für den späteren Gebrauch die Auswahl des Schriftstil, welches als Text weitergegeben wird, in Zahlen um
+            0 Steht für normal
+            1 Steht für dick
+            2 Steht für kursiv
+            3 Steht für unterstrichen
+            </summary>
+            <param name="value">Als Parameter wird der ausgewählte Schriftstil mitgegeben</param>
+            <returns>Gibt die konvertierte Zahl zurück</returns>
+        </member>
+        <member name="M:ReportGenerator.Titel.ChooseFont">
+            <summary>
+            Ruft alle möglichen Schriftarten von Windows auf und speichert si in eine ComboBox
+            Standardwert ist Arial
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.ChooseFontStyle">
+            <summary>
+            Generiert eine Liste mit den vier möglichen Schriftstils
+            Standardwert ist Normal
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.ChooseColor">
+            <summary>
+            Ruft alle möglichen Farben in Windows auf und speichert sie in eine Liste
+            Standardwert ist schwarz
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Titel.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingabe zurückzusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Titel.EmptyTextBox">
+            <summary>
+            Überprüft ob alle Textfelder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Titel.int_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Lässt bei den Textfelder 'Size' und 'Paragraph' nur numerische Werte zu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Titel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.ClearType">
+            <summary>
+            Property für die Texteingabe,
+            Die Eingabe wird maskiert um die Xml Syntax nicht zu verletzen
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.Font">
+            <summary>
+            Property für den Schriftart des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.Size">
+            <summary>
+            Property für den Schriftstil des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.StyleConverter">
+            <summary>
+            Property für den Schriftstil des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.Color">
+            <summary>
+            Property für die Schriftfarbe des Texts
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.Paragraph">
+            <summary>
+            Property für den Absatz nach dem Text
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Titel.PageBreak">
+            <summary>
+            Property für einen möglichen Seitenumbruch
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.Variabel">
+            <summary>
+            Interaction logic for Variabel.xaml
+            </summary>
+            <summary>
+            Variabel
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Variabel.#ctor(System.Collections.Generic.List{System.String},System.Collections.Generic.SortedList{System.String,System.String})">
+            <summary>
+            Initalisiert die WPF Komponente
+            </summary>
+            <param name="list">Als Paramter wird die Liste mit allen gesetzten Verbindungs id übergeben</param>
+            <param name="variabel">Eine Key Value Liste: Inhalt dieser Liste ist der Variablenname und der dazugehörende Typ</param>
+        </member>
+        <member name="M:ReportGenerator.Variabel.FillComboBox(System.Collections.Generic.List{System.String})">
+            <summary>
+            Schreibt alle vorhandenen Verbindungs-Id in eine ComboBox
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:ReportGenerator.Variabel.Cancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zurückzusetzen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Variabel.Send_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button Handler um die Eingaben zu bestätigen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Variabel.EmptyTextBox">
+            <summary>
+            Überprüft, ob alle Textfelder etwas beinhalten
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Variabel.int_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Lässt bei der Auswahl lokale Nummervariable nur Zahle zu.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.Variabel.VariableAlreadyExists">
+            <summary>
+            Überprüft, ob der Variablennamen schon gesetzt wurde
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.Variabel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Variabel.Id">
+            <summary>
+            Propert für die Verbindungsid
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Variabel.Identificator">
+            <summary>
+            Property für den Namen der Variable
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Variabel.Type">
+            <summary>
+            Property für den Typ der Variable
+            Falls int ausgewählt wurde wird der Typ auf int gesetzt ansonsten auf string
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Variabel.Source">
+            <summary>
+            Property für die Quelle der Variable
+            Falls local ausgewählt wurde, wird die Quelle auf lokal gesetzt
+            Ansonsten wir die Quelle auf sql gesetzt
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Variabel.Text">
+            <summary>
+            Property für den gewünschten Variableninhalt
+            Der Inhalt wird maskiert, um die Xml Syntax nicht zu verletzen
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.WriteXml">
+            <summary>
+            Diese Klasse ist für den gesamten Aufbau des XML Dokuments zuständig
+            </summary>
+        </member>
+        <member name="F:ReportGenerator.WriteXml.doc">
+            <summary>
+            Speicher für ein XDocument Objekt
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.#ctor">
+            <summary>
+            Konstruktor der Klasse
+            Instanziert ein neues XDocument Objekt mit den benötigten Informationen
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Format(ReportGenerator.PageSetup)">
+            <summary>
+            Fügt dem XDocument Objekt die Format Parameter hinzu
+            </summary>
+            <param name="pageSetup">Ein PageSetup Objekt, welches die gewünschten Parameter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Connection(ReportGenerator.Connection)">
+            <summary>
+            Fügt dem XDocument Objekt einen Connection Knoten mitsamt Parameter hinzu
+            </summary>
+            <param name="connection">Ein Connection Objekt, welches die gewünschten Parameter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Variables(ReportGenerator.Variabel)">
+            <summary>
+            Fügt dem XDocument Objekt einen Variable Konten mitsamt Paramter hinzu
+            </summary>
+            <param name="variable">Ein Variabel Objekt, welches die gewünschten Paramter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Mathe(ReportGenerator.Mathematic)">
+            <summary>
+            Fügt dem XDocument Objekt einen Math Knoten mitsamt Parameter hinzu
+            </summary>
+            <param name="mathe">Ein Mathematic Objekt, welches die gewünschten Paramter beihnaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Text(ReportGenerator.Text)">
+            <summary>
+            Fügt dem XDocument Objekt einen Textknoten mitsamt Parameter hinzu
+            </summary>
+            <param name="text">Ein Text Objekt welches die gewünschten Paramter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.TextManually(ReportGenerator.Text)">
+            <summary>
+            Erstellt einen "orphanen" Textknoten mitsamt Parameter und wandelt es in einen string um
+            </summary>
+            <param name="text">Ein Text Objekt welches die gewünschten Parameter beinhaltet</param>
+            <returns>Den gesamten Textknoten als string</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Titel(ReportGenerator.Titel)">
+            <summary>
+            Fügt dem XDocument Objekt einen Titel mitsamt Parameter hinzu
+            </summary>
+            <param name="titel">Ein Titel Objekt welches die gewünschten Paramter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.TitelManually(ReportGenerator.Titel)">
+            <summary>
+            Erstellt einen "orphanen" Titelknoten mitsamt Parameter und wandelt es in einen string um
+            </summary>
+            <param name="titel">Ein Titel Objekt welches die gewünschten Parameter beinhaltet</param>
+            <returns>Den gesamten Titelknoten als string</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Tabelle(ReportGenerator.Tabelle)">
+            <summary>
+            Fügt dem XDocument Objekt einen Tabellenknoten mitsamt Parameter hinzu
+            </summary>
+            <param name="table">Ein Tabellenobjekt welches die gewünschten Paramter beinhaltet</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.TabelleManually(ReportGenerator.Tabelle)">
+            <summary>
+            Erstellt einen "orphanen" Tabellenknoten mitsamt Parameter und wandelt es in einen string um
+            </summary>
+            <param name="table">Ein Tabellenobjekt welches die gewünschten Parameter beinhaltet</param>
+            <returns>Den gesamten Tabellenknoten als string</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.ReadConnections">
+            <summary>
+            Liest alle gesetzen Verbindungen eines XML Objekts aus und speichert die Id
+            </summary>
+            <returns>Eine Liste mit all den Verbindungen</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.ReadVariables">
+            <summary>
+            Liest alle Variablen aus einem XML Objekt aus und speichert den Namen und den Typ
+            </summary>
+            <returns>Eine sortierte Liste, die alle Namen und Typen der gesetzten Variablen beinhalten</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.getXML">
+            <summary>
+            Gibt den gesamte XML Objekt (Deklaration inbegriffen) als string zurück
+            </summary>
+            <returns>Gesamtes XML Objekt als string</returns>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Save(System.String)">
+            <summary>
+            Speichert das XML Objekt in ein Xml Dokument auf dem Dateisystem
+            </summary>
+            <param name="path">Der gewünschte Pfad mitsamt Dateinamen</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.WriteFromString(System.String)">
+            <summary>
+            Parset den gesamten Inhalt der Textbox in das XDocument Objekt ein 
+            </summary>
+            <param name="xml">Der gesamte Inhalt der Textbox</param>
+        </member>
+        <member name="M:ReportGenerator.WriteXml.Open(System.String)">
+            <summary>
+            Öffnet eine existierende Xml Datei auf dem Dateisystem und schreibt es in das XDocument Objekt
+            </summary>
+            <param name="fileName">Dateipfad der Xml Datei</param>
+        </member>
+        <member name="T:ReportGenerator.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:ReportGenerator.MainWindow.fileName">
+            <summary>
+            Speicher für den Pfad und Namen des XML Dokuments
+            </summary>
+        </member>
+        <member name="F:ReportGenerator.MainWindow.xml">
+            <summary>
+            Speicher für ein Objekt der Klasse WriteXml, beinhaltet das gesamte XML Dokument
+            </summary>
+        </member>
+        <member name="F:ReportGenerator.MainWindow.id">
+            <summary>
+            Speicher für die Liste aller gesetzten Verbindungen
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.#ctor">
+            <summary>
+            Initalisiert die WPF Komponente
+            Initalisiert ein WriteXml Objekt
+            Aktualisiert die TextBox
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.DBConn_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            DbConn Handler
+            Initialisert eine neues Connection Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, werden die eingegeben Paramter im XML Objekt geschrieben. 
+            Die Textbox wird aktualisiert und die Verbindung wird der Verbindungsliste hinzugefügt
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Varia_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Variable Button Handler
+            Initialisert eine neues Variable Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, werden die eingegeben Paramter im XML Objekt geschrieben. 
+            Die Textbox wird aktualisiert und die gesetze Variable wird in der Textbox der Variablen aufgenommen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Titel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Titel Button Handler
+            Initialisert eine neues Titel Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, wird überprüft, ob der manuelle Modus aktiviert ist
+            Dies wird benötigt um den genauen Ort des XML Knotens im XML Objekt zu setzen.
+            Zum Schluss werden die Paramter in das XML Objekt geschrieben
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Tabelle_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Tabelle Button Handler
+            Initialisert eine neues Tabellen Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, wird überprüft, ob der manuelle Modus aktiviert ist
+            Dies wird benötigt um den genauen Ort des XML Knotens im XML Objekt zu setzen.
+            Zum Schluss werden die Paramter in das XML Objekt geschrieben
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Text_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Text Button Handler
+            Initialisert eine neues Text Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, wird überprüft, ob der manuelle Modus aktiviert ist
+            Dies wird benötigt um den genauen Ort des XML Knotens im XML Objekt zu setzen.
+            Zum Schluss werden die Paramter in das XML Objekt geschrieben
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Format_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Format Button Handler
+            Initialisert eine neues Format Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, werden die eingegebenen Parameter in das XML Objekt übernommen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Math_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Math Button Handler
+            Initialisert eine neues Mathematic Objekt und öffnet eine neues Fenster
+            Falls das Fenster ein OK zurückgibt, werden die eingegeben Parameter in das XML Objekt übernommen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.New_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            New Button Handler
+            Setzt das gesamte XML Objekt sowie alle grafischen Anzeigen zurück
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Open_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Open Button Handler
+            Öffnet ein schon vorhandenes XML Dokument. 
+            Um sicher zugehen, dass vorhin nicht irgendwelche Parameter eingegeben wurden, werden die Id sowie Variable Liste geleert und erst danach wieder gefüllt
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Save Button Handler
+            Ermöglicht das Speicher des XML Objekts in ein XML Dokument.
+            Falls der Dateiname schon bekannt ist, wird die vorhandene Datei überschrieben, ansonsten wird nachgefragt, wo die Datei gespeichert werden soll.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Rapport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Rapport Button Handler
+            Erstellt direkt aus dem XML Objekt das Word Dokument
+            Falls ein Fehler zurückgegeben wird, wird dieser auf als MessageBox aufgezeigt
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.AddToList(System.String)">
+            <summary>
+            Fügt der Verbindungsliste eine neue Verbindung hinzu
+            </summary>
+            <param name="value">Die Id der Verbindung</param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.GetList">
+            <summary>
+            Gibt die Verbindungsliste zurück
+            </summary>
+            <returns>Die Verbindungsliste</returns>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.InsertTextBox">
+            <summary>
+            Aktualisert den Inhalt der TextBox
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.InsertTextBoxManually(System.String)">
+            <summary>
+            Aktualisiert den Inhalt der TextBox im manuellen Modus
+            </summary>
+            <param name="value">Den XML Knoten als String</param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.InsertVariables(System.String,System.String)">
+            <summary>
+            Fügt die einzelnen Variablen in die Variabletextbox ein
+            </summary>
+            <param name="name">Der Name der Variable</param>
+            <param name="type">Der Typ der Variable</param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.EditButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Schaltet in den manuellen Modus
+            Es kann in der TextBox direkt geschrieben werden
+            Falls der manuelle Modus verlassen wird, wird der gesamte String in das Xml Objekt geschrieben.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.Edit">
+            <summary>
+            Setzt den Format Knopf auf deaktiviert und den Save Knopf auf aktiviert.
+            Dies wird benötigt, da das Format nur einmal gesetzt werden soll und erst nach dem Setzen des Formats die Datei gespeichert werden darf.
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.RemoveConnectionsId">
+            <summary>
+            Leert die Verbindungsliste
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.RemoveVariables">
+            <summary>
+            Leert die Variablenliste
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.InsertVariables">
+            <summary>
+            Fügt der Liste eine weitere Variable hinzu
+            </summary>
+        </member>
+        <member name="M:ReportGenerator.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.MainWindow.XmlBox">
+            <summary>
+            Property für die TextBox
+            </summary>
+        </member>
+        <member name="T:ReportGenerator.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ReportGenerator.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
